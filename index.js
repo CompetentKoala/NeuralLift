@@ -38,7 +38,7 @@ let chatOpened = false;
 function displayMessage(message, sender) {
   const messageDiv = document.createElement("div");
   messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
-  if (message.includes("contact")) {
+  if (message.includes("contact") || message.includes("Contact")) {
     if (submitForm.style.opacity === "0" || submitForm.style.opacity === "") {
       submitForm.style.opacity = "1"; // Make visible
       submitForm.style.visibility = "visible"; // Ensure it's visible
