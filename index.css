@@ -166,8 +166,7 @@ main{
   position:absolute;
   width: 30px;
   height: 30px;
-  top:0px;
-  left:20px;
+  top:10px;
   border-radius: 50%;
   border: 3px solid rgb(0, 0, 0);
   display: flex;
@@ -396,7 +395,7 @@ background-color: #221f1f;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.16);
+  background-color: rgb(67, 67, 67);
   backdrop-filter: blur(15px);
   border: 2px solid white;
   border-radius: 5px;
