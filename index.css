@@ -402,6 +402,7 @@ background-color: #221f1f;
   border-radius: 5px;
 z-index: 0;
 position: fixed;
+top: 20%;
 transition: .3s ease-in-out;
 }
 
@@ -650,7 +651,7 @@ width: 80%;
 #submit-form{
   width: 80%;
   height: 60%;
-  background-color: rgba(255, 255, 255, 0.242); /* semi-transparent background */
+  background-color: rgb(165, 165, 165); /* semi-transparent background */
   backdrop-filter: blur(15px); /* Apply blur effect to the background */
   display: flex;
   justify-content: center;
