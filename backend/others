@@ -1,0 +1,30 @@
+
+        <h1>NeuralLift Solutions</h1>
+        <img src="/artificial-intelligence.png" alt="">
+        <p>NeuralLift Solutions is a AI consulting team.
+            We work with our clients to understand
+            their unique needs and develop solutions
+            that helps them achieve their goals.
+            </p>
+            <p>
+                Our team uses
+                the latest technologies to create high-quality
+                solutions that are tailored to each client's
+                 specific requirements.
+                 Contact us today to learn more
+                 about how we can help your
+                 business succeed.
+                </p>
+            <div>
+                <button>Contact</button>
+            </div>
+            <div class="chat-bot">
+                <button id="toggle-chat">Open Chat</button>
+                    <div id="chat-container">
+                        <div id="chat-window">
+                          <div id="messages"></div>
+                        </div>
+                        <input id="user-input" type="text" placeholder="Type your message here..." />
+                        <button id="send-button">Send</button>
+                    </div>
+                </div>

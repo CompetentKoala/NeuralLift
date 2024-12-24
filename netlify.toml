@@ -1,0 +1,7 @@
+[build]
+  functions = "backend/netlify/functions"  # Location of serverless functions
+  publish = "."                    # Root directory contains your frontend files
+
+[dev]
+  functions = "backend/netlify/functions"  # Local development functions directory
+  port = 8888                      # Port for local development

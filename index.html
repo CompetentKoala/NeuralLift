@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>NeuralLift Solutions</title>
+</head>
+<body>
+    <div id="chat-bot" class="chat-bot">
+        <div id="chat-container">
+            <div id="chat-window">
+              <div id="messages"></div>
+            </div>
+
+            <div class="field">
+                <input type="text" id="user-input" placeholder="..." />
+                <label for="user-input">Message</label>
+              </div>
+            <button id="send-button">SEND</button>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <h2>NeuralLift Solutions</h2>
+
+            <ul class="nav-links">
+
+                <button id="toggle-chat">Open Chat</button>
+            </ul>
+
+
+
+        </nav>
+
+
+    </header>
+    <main>
+        <form id="submit-form" class="submit-form">
+            <p id="close-form">X</p>
+            <h1>Contact Us</h1>
+
+            <div class="field">
+                <input required  type="text" id="name" placeholder="..." />
+                <label for="name">Name</label>
+              </div>
+
+              <div class="field">
+                <input required  type="text" id="email" placeholder="..." />
+                <label for="email">Email</label>
+              </div>
+        <div class="field">
+            <textarea id="message" name="message" required placeholder="Message"></textarea>
+            <label for="message">Message</label>
+        </div>
+            <button type="submit" class="submit-form-button">SUBMIT FORM</button>
+        <p id="email-success">Email Successfully sent; We will reach out to you to schedule a call soon!</p>
+        <p id="email-failure">Email failed to send; this means there is a connectivity error to our servers</p>
+        </form>
+        <div id="home">
+            <p>NeuralLift Solutions helps businesses and individuals save time and money by integrating AI into their workflows. From automating tasks to improving efficiency, we provide tailored solutions to meet your needs. Schedule a free consultation today to discover how AI can transform your operations.
+            </p>
+            <div id="close-home">
+                X
+            </div>
+        </div>
+            <div id="services">
+                <p>We identify where AI can save you time and money, offering tailored integrations to optimize your business. From automating tasks to streamlining operations, we provide one-time setups or ongoing support to ensure lasting success.
+                </p>
+                <div id="close-services">
+                    X
+                </div>
+            </div>
+            <div id="process">
+                <p>Start with a free consultation to uncover AI opportunities. Afterward, we provide a custom package detailing actions, pricing, and results. Choose a one-time setup or ongoing support for seamless integration.
+                </p>
+                <div id="close-process">
+                    X
+                </div>
+            </div>
+            <div id="pricing">
+                <p>Our services range from $100 to $5000, depending on the scope of your project. After your free consultation, we’ll provide a clear, tailored pricing plan with no surprises.
+                </p>
+                <div id="close-pricing">
+                    X
+                </div>
+            </div>
+
+
+    </main>
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li id="open-home" class="footer-nav-i"><a href="#">Home</a>
+                <p>
+                    Home
+                    NeuralLift Solutions helps businesses and individuals save time and money by integrating AI into their workflows. From automating tasks to improving efficiency, we provide tailored solutions to meet your needs. Schedule a free consultation today to discover how AI can transform your operations.</p>
+                </li>
+                <li id="open-services" class="footer-nav-i"><a href="#">Services</a>
+                    <p>We identify where AI can save you time and money, offering tailored integrations to optimize your business. From automating tasks to streamlining operations, we provide one-time setups or ongoing support to ensure lasting success.
+
+                    </p>
+                </li> <li id="open-process" class="footer-nav-i"><a href="#">Process</a>
+                    <p>Start with a free consultation to uncover AI opportunities. Afterward, we provide a custom package detailing actions, pricing, and results. Choose a one-time setup or ongoing support for seamless integration.
+
+
+                    </li> <li  id="open-pricing"class="footer-nav-i"><a href="#">Pricing</a>
+                        <p>Our services range from $100 to $5000, depending on the scope of your project. After your free consultation, we’ll provide a clear, tailored pricing plan with no surprises.
+
+                        </p>
+                </li>  <li id="mobile-contact-form-button"  class="footer-nav-i"><a href="#">Contact</a>
+                    <p>
+                        Reach out via email to schedule your free consultation or ask about our services. We’re here to help you integrate AI and unlock your full potential.</p>
+                        <button id="open-form-button">OPEN FORM</button>
+                    </li>
+            </ul>
+
+        </nav>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,696 @@
+body{
+    background-image: url('/background\ AI.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Hanken Grotesk, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+h2{
+  cursor: default
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 05%;
+    background-color: #ffffff38;
+    backdrop-filter: blur(15px);
+    color: white;
+    position: fixed;
+    z-index: 100;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin: 10px;
+    width: 100%;
+}
+ul{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+a{
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+}
+
+h1{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+#messages > div{
+    margin-bottom: 20px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 10%;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+
+}
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+
+}
+
+.footer-nav > ul >li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer-nav > ul{
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.footer-nav-i{
+  display: flex;
+  justify-content: center;
+
+  background-color: #ffffff19;
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-right: 2px solid white;
+  height: 100%;
+  width: 50%;
+  transition:  1s ease-in-out;
+  position: relative;
+  height: 500px;
+  transform: translateY(200px);
+}
+
+.footer-nav-i:hover{
+transform: translateY(-100px);
+
+cursor: pointer;
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+}
+
+#submit-form{
+  width: 500px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.242); /* semi-transparent background */
+  backdrop-filter: blur(15px); /* Apply blur effect to the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 0;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+#close-form{
+  color: white;
+  position:absolute;
+  width: 30px;
+  height: 30px;
+  top:0px;
+  left:20px;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+#close-form:hover{
+  transform: rotate(180deg);
+}
+#submit-form > h1{
+  color: white;
+}
+
+.field {
+  position: relative;
+  width: 50%;
+}
+
+.field input {
+  color: #ffffff;
+  background: none;
+  padding: 20px;
+  border: 2px solid #030104;
+  border-radius: 5px;
+  width: 100%;
+}
+.field textarea {
+  color: #ffffff;
+  background: none;
+  padding: 0.625rem;
+  border: 2px solid #030104;
+  width:110%;
+  padding: 10px;
+  resize: none; /* Disable resizing */
+  border-radius: 5px;
+}
+textarea
+{
+  width: 1000px;
+  height: 100px;
+}
+
+.field label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  translate: 0.625rem 0.625rem;
+  color: #000000;
+  background-color: #fef4f700;
+  padding-inline: 0.25rem;
+  border: 2px solid transparent;
+  pointer-events: none;
+  transition: translate 250ms, background-color 250ms, border-color 250ms;
+}
+#open-form-button{
+  width: 50%;
+  height: 10%;
+  cursor: pointer;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.098);
+  color: rgb(255, 255, 255);
+  transition: .2s ease-in-out;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.field:focus-within label,
+.field:not(:has(:placeholder-shown)) label {
+  translate: 0.625rem -1rem;
+  border-color: #030104;
+  border-radius: 5px;
+  background-color: #ddd;
+}
+
+.field ::placeholder {
+  color: transparent;
+}
+
+
+
+.submit-form-button{
+  width: 50%;
+  height: 10%;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  transition: .2s ease-in-out;
+  font-size: 20px;
+  font-weight: bold;
+transition: .3s ease-in-out;
+}
+
+.submit-form-button:hover{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+
+
+
+
+
+.footer-nav-i > a{
+  font-size: 2rem;
+}
+
+
+
+
+
+button:hover{
+    background-color: rgba(5, 5, 5, 0); /* semi-transparent background */
+    backdrop-filter: blur(5px); /* Apply blur effect to the background */
+    color: #1e1e1e;
+}
+
+
+
+
+
+.chat-bot{
+    position: fixed;
+    right: 0;
+    top: 100px;
+    height: 400px;
+   width: 50px;
+    transition: .6s ease;
+    z-index: 1000;
+
+}
+
+#chat-container {
+  height: 400px;
+  width: 200px;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.189); /* semi-transparent background */
+    backdrop-filter: blur(15px);
+    transform: translateX(100%);  /* Initially hidden */
+    transition: 0.6s ease; /* Smooth transition */
+
+  }
+
+  .chat-bot:hover{
+    transform: translateX(-160%);
+  }
+ #chat-container:hover{
+    width: 400px;
+  }
+
+
+  #chat-window {
+    flex-grow: 1;
+    overflow-y: hidden;
+    margin-bottom: 10px;
+
+  }
+
+  #messages {
+    padding: 5px;
+    color: white;
+    max-height: 260px;
+    padding: 5px;
+    color: white;
+    max-height: 260px;  /* Ensure enough space for scroll */
+    overflow-y: auto;   /* Enables scrolling within the messages container */
+  }
+  #messages::-webkit-scrollbar {
+    width: 0; /* Removes scrollbar width for WebKit browsers */
+    height: 0; /* Removes scrollbar height for WebKit browsers */
+  }
+
+
+  #user-input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 0; /* Remove margin to prevent shifting */
+    flex-shrink: 0; /* Prevent the input from shrinking */
+  }
+
+  #send-button {
+    border-radius: 5px;
+    border: none;
+    width: 30%;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: black;
+    color: white;
+  }
+
+  #toggle-chat {
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 0px;
+    margin-top: 0;
+background-color: #221f1f;
+    color: white;
+    z-index: 10000;
+
+  }
+
+
+
+
+/*MOBILE BUTtONS   ----------------------------------*/
+#home, #services, #process, #pricing{
+  opacity: 0;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  margin: 10px;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(15px);
+  border: 2px solid white;
+  border-radius: 5px;
+z-index: 0;
+position: fixed;
+transition: .3s ease-in-out;
+}
+
+#close-home, #close-services, #close-process, #close-pricing{
+color: white;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.773);
+  border-radius: 50%;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s ease-in-out;
+  z-index: 0;
+  cursor: pointer;
+}
+
+#close-home:hover, #close-services:hover, #close-process:hover, #close-pricing:hover{
+  transform: rotate(180deg);
+}
+
+
+#email-success{
+  font-weight: bold;
+  text-align: center;
+  color: rgb(47, 255, 50);
+  position: absolute;
+  display: none;
+  bottom: 0px;
+}
+#email-failure{
+  font-weight: bold;
+  text-align: center;
+  color: rgb(254, 0, 0);
+  position: absolute;
+  display: none;
+  bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 700px) {
+    Body{
+      background-image: url("./mobile-background2.png");
+      background-size:cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100dvw;
+    height: 05%;
+    background-color: #ffffff38;
+    backdrop-filter: blur(15px);
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 100;
+}
+footer{
+  display: block;
+  width: 90vw;
+  height: 30vh;
+  color: white;
+  position:fixed;
+  bottom: 0px;
+  z-index: 100;
+  margin: 15px;
+}
+.footer-nav{
+  display: block;
+  width: 100%;
+  height: 100%;
+
+}
+
+.footer-nav > ul >li{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 0px;
+}
+.footer-nav > ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.footer-nav-i{
+display: flex;
+justify-content: center;
+font-weight: bold;
+background-color: #ffffff39;
+backdrop-filter: blur(15px);
+padding: 20px;
+border-left: 2px solid white;
+border-right: 2px solid white;
+border-top: 2px solid white;
+border-bottom: 2px solid white;
+height: 100%;
+width: 20%;
+border-radius: 15px;
+transition:  1s ease-in-out;
+position: relative;
+height: 50px;
+transform: translateY(0px);
+}
+
+.footer-nav-i > p {
+  display: none;
+}
+
+.footer-nav-i:hover{
+transform: translateY(0px);
+
+cursor: pointer;
+
+}
+
+#submit-form{
+width: 500px;
+height: 500px;
+background-color: rgba(0, 0, 0, 0.242); /* semi-transparent background */
+backdrop-filter: blur(15px); /* Apply blur effect to the background */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 10px;
+z-index: 0;
+opacity: 0;
+transition: 1s ease-in-out;
+}
+#close-form{
+color: white;
+position:absolute;
+width: 30px;
+height: 30px;
+top:0px;
+left:20px;
+border-radius: 50%;
+border: 3px solid rgb(0, 0, 0);
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(0, 0, 0);
+cursor: pointer;
+transition: .2s ease-in-out;
+}
+
+#close-form:hover{
+transform: rotate(180deg);
+}
+#submit-form > h1{
+color: white;
+}
+
+
+#open-form-button{
+width: 50%;
+height: 10%;
+cursor: pointer;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+background-color: rgba(0, 0, 0, 0.098);
+color: rgb(255, 255, 255);
+transition: .2s ease-in-out;
+font-size: 10px;
+font-weight: bold;
+}
+
+
+
+.footer-nav-i > a{
+font-size: 1.5rem;
+}
+
+
+.chat-bot{
+  position: fixed;
+  right: 0;
+  top: 100px;
+  height: 400px;
+  width: 100%;
+  transition: .6s ease;
+  z-index: 0;
+
+}
+
+#chat-container {
+height: 100%;
+width: 80%;
+  border: 3px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.189); /* semi-transparent background */
+  backdrop-filter: blur(15px);
+  transform: translateX(120%);  /* Initially hidden */
+  transition: 0.6s ease; /* Smooth transition */
+
+}
+
+.chat-bot:hover{
+  transform: translateX(0%);
+}
+#chat-container:hover{
+  width: 80%;
+}
+
+
+#chat-window {
+  flex-grow: 1;
+  overflow-y: hidden;
+  margin-bottom: 10px;
+
+}
+
+#messages {
+  padding: 5px;
+  color: white;
+  max-height: 260px;
+  padding: 5px;
+  color: white;
+  max-height: 260px;  /* Ensure enough space for scroll */
+  overflow-y: auto;   /* Enables scrolling within the messages container */
+}
+#messages::-webkit-scrollbar {
+  width: 0; /* Removes scrollbar width for WebKit browsers */
+  height: 0; /* Removes scrollbar height for WebKit browsers */
+}
+
+#submit-form{
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.242); /* semi-transparent background */
+  backdrop-filter: blur(15px); /* Apply blur effect to the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 0;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  border: 2px solid white;
+}
+
+#open-form-button{
+  display: none;
+}
+
+.field {
+  position: relative;
+  width: 90%;
+
+}
+
+.field input {
+  width: 85%;
+
+}
+.field textarea {
+  width: 91.5%;
+}
+  }
